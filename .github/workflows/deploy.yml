@@ -2,7 +2,7 @@ name: Build and Deploy React to Github Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ task1 ]
     
   workflow_dispatch:
   
