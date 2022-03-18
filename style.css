@@ -37,6 +37,9 @@ input:checked + label{
 .active, .textEx{
     font-family: "Comic Sans MS";
 }
+.active.textEx{
+    color: brown;
+}
 
 textarea{
     background-color: wheat;
