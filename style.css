@@ -26,9 +26,18 @@ input:checked + label{
     color: red;
 }
 
-label + .check{
-    color: white;
+.active{
+    color:wheat;
 }
+
+.textEx{
+    font-size: 15px;
+}
+
+.active, .textEx{
+    font-family: "Comic Sans MS";
+}
+
 textarea{
     background-color: wheat;
 }
