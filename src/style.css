@@ -1,50 +1,24 @@
-body {
-    background-color: gray;
+body{
+    margin:0;
+    padding: 0;
+}
+section{
+    height: 100%;
+    width: 100%;
 }
 
-input {
-    border: none;
+div{
+    height: 50px;
+    width: 50px;
 }
-
-input[type=text] {
-    background-color: cadetblue;
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-table tr:first-child td{
-    background-color: beige;
+div:nth-child(2n){
+    background-color: brown;
 }
-
-input[type=text]:focus {
-    background-color: aqua;
-}
-
-#button {
-    background-color: aqua;
-}
-
-input:checked + label{
-    color: red;
-}
-
-.active{
-    color:wheat;
-}
-
-.textEx{
-    font-size: 15px;
-}
-
-.active, .textEx{
-    font-family: "Comic Sans MS";
-}
-.active.textEx{
-    color: brown;
-}
-
-textarea{
+div:nth-child(2n+1){
     background-color: wheat;
-}
-textarea::placeholder{
-    color: brown;
-    opacity: 0.3;
 }
