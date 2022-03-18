@@ -1,3 +1,38 @@
-body{
+body {
     background-color: gray;
+}
+
+input {
+    border: none;
+}
+
+input[type=text] {
+    background-color: cadetblue;
+}
+
+table tr:first-child td{
+    background-color: beige;
+}
+
+input[type=text]:focus {
+    background-color: aqua;
+}
+
+#button {
+    background-color: aqua;
+}
+
+input:checked + label{
+    color: red;
+}
+
+label + .check{
+    color: white;
+}
+textarea{
+    background-color: wheat;
+}
+textarea::placeholder{
+    color: brown;
+    opacity: 0.3;
 }
