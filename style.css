@@ -8,9 +8,9 @@ section{
 }
 
 div{
+    border: 2px solid black;
     height: 50px;
-    width: 50px;
-    margin: 50px;
+    width: 100%;
 }
 section{
     display: flex;
@@ -21,4 +21,10 @@ div:nth-child(2n){
 }
 div:nth-child(2n+1){
     background-color: wheat;
+}
+
+@media (min-width: 720px) {
+    div{
+        width: 45%;
+    }
 }
