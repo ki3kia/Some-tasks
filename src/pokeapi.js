@@ -15,6 +15,9 @@ window.onload = function () {
             let pokeArr = json.results;
             pokeArr.forEach(poke => createBlock(poke.name, pokeSection));
             pokeSection.prepend(loadBtn);
+        })
+        .catch((reject)=>{
+            createBlock('Something going wrong', pokeSection)
         });
 }
 
