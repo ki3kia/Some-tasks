@@ -10,8 +10,7 @@ window.onload = function () {
 
     fetch(url + `?offset=${offset}&limit=${limit}`)
         .then(response => response.json())
-        .then(function (json) {
-            console.log(offset);
+        .then((json) => {
             let pokeArr = json.results;
             pokeArr.forEach(poke => createBlock(poke.name, pokeSection));
             pokeSection.prepend(loadBtn);
@@ -22,7 +21,10 @@ window.onload = function () {
 }
 
 
-loadBtn.addEventListener("click", loadPoke);
+loadBtn.addEventListener("click", ()=>{
+    let result = loadPoke();
+    result.then(arr => arr.forEach(poke => createBlock(poke.name, pokeSection)));
+});
 
 function createBlock(text, sect) {
 
@@ -36,6 +38,5 @@ async function loadPoke() {
     offset += 10;
     let result = await fetch(url + `?offset=${offset}&limit=${limit}`);
     let arr = await result.json();
-    arr = arr.results;
-    arr.forEach(poke => createBlock(poke.name, pokeSection));
+    return arr.results;
 }
