@@ -21,10 +21,7 @@ window.onload = function () {
 }
 
 
-loadBtn.addEventListener("click", ()=>{
-    let result = loadPoke();
-    result.then(arr => arr.forEach(poke => createBlock(poke.name, pokeSection)));
-});
+loadBtn.addEventListener("click", loadPoke);
 
 function createBlock(text, sect) {
 
@@ -38,5 +35,7 @@ async function loadPoke() {
     offset += 10;
     let result = await fetch(url + `?offset=${offset}&limit=${limit}`);
     let arr = await result.json();
-    return arr.results;
+    arr = arr.results;
+    arr.forEach(poke => createBlock(poke.name, pokeSection))
+    return arr;
 }
